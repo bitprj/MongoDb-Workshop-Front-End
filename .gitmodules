@@ -1,0 +1,3 @@
+[submodule "MongoDB-Workshop"]
+	path = MongoDB-Workshop
+	url = https://github.com/bitprj/MongoDB-Workshop.git
