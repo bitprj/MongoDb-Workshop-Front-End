@@ -1,0 +1,17 @@
+.masthead{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 500px;
+    width: 100%;
+}
+
+.topMenu{
+    align-self: flex-start;
+}
+
+.title{
+    /* margin-bottom: 200px; */
+    font-size: 50px !important;
+}
