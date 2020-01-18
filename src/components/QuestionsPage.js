@@ -14,8 +14,9 @@ class QuestionsPage extends React.Component{
     
     render(){
         return(
-            <div className="ui container">
-                <h1 className=" header ui center aligned header">Lost and Found game</h1>
+            <div className="container">
+                <h1 className="title">Lost and Found game</h1>
+                <div></div>
                 <QuestionList questions={this.state.questions}/>
             </div>
         )

@@ -3,7 +3,7 @@ import './HomePage-style.css'
 
 const HeaderMenu = (props) =>{
     return (
-        <div className="ui inverted vertical masthead center aligned segment">
+        <div className="masthead">
             {/* <div className="topMenu ui container">
                 <div className="ui large secondary inverted pointing menu">
                     <button className="toc item">
@@ -13,10 +13,13 @@ const HeaderMenu = (props) =>{
                 </div>
             </div> */}
             <div className="ui text container">
-                <h1 className="title ui inverted header">
+                {/* <h1 className="title ui inverted header">
                     {props.title}
-                </h1>
+                </h1> */}
             </div>
+            {/* <cdiv className="mongo_background"></cdiv> */}
+            <img className="mongo_background" src="https://files.slack.com/files-pri/TJ2FB5CE9-FSU6EJ6KA/mongodb-bitproject.png" alt="Picture"/>
+            
         </div>
     )
 }
