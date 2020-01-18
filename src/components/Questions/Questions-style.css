@@ -1,3 +1,29 @@
 .list{
     margin-top: 10px;
 }
+
+.header{
+    margin-top: 20px !important;
+}
+
+.collapsible_bar_container_closed{
+    cursor: pointer;
+    border: solid 1px #34495e;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.collapsible_bar_container_open{
+    cursor: pointer;
+    border: solid 1px #34495e;
+    border-radius: 10px 10px 0px 0px;
+    padding: 15px;
+}
+
+.collapsible_bar_content{
+    cursor: pointer;
+    border: solid 1px #34495e;
+    border-top: none;
+    border-radius: 0px 0px 10px 10px;
+    padding: 15px;
+}

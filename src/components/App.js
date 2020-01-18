@@ -1,7 +1,6 @@
 import React from 'react'
 // import HiddenMenu from './util/HiddenMenu'
 import HeaderMenu from './HomePage/HeaderMenu'
-import QuestionList from './Questions/QuestionsList'
 import IntroSegment from './HomePage/IntroSegment';
 
 class App extends React.Component{
@@ -18,7 +17,6 @@ class App extends React.Component{
                 <div className="pusher">
                     <HeaderMenu title="MongoDB Workshop"/>
                     <IntroSegment/>
-                    {/* <QuestionList questions={this.state.questions}/> */}
                 </div>
             </div>
         )
