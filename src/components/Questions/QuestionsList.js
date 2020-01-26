@@ -6,8 +6,7 @@ const QuestionList = (props) =>{
 
    
     const renderList = props.questions.map((question, index)=>{
-        const answer = props.answers[index]
-        return <QuestionCard question={question} answer={answer} key={index+1} number={index+1} />
+        return <QuestionCard question={question}  key={index+1} number={index+1} />
     })
 
     

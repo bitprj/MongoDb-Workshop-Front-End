@@ -1,15 +1,27 @@
 import React from 'react';
-
+import { mflix } from '../../apis/mflix_database'
 
 class QuestionCard extends React.Component{
     constructor(props){
         super(props);
-        console.log('Hello')
         this.state = {
-            collapse: false
+            collapse: false,
+            answer: ''
         }
 
         this.collapseSegment = this.collapseSegment.bind(this)
+    }
+
+    componentDidMount(){
+        this.getAnswerMovie(`/mflix_questions/${this.props.number}`)
+    }
+
+    getAnswerMovie = async (url) => {
+        const response = await mflix.get(url).then((data)=>{
+            
+        }).catch(error =>{
+            this.setState({answer: 'Fix the Backend!'})
+        })
     }
 
     
@@ -26,7 +38,7 @@ class QuestionCard extends React.Component{
                     <div className={containerState} onClick={this.collapseSegment}>
                         <div className="collapsible_bar_title">Question {this.props.number}</div>
                     </div>
-                    {this.state.collapse ? (<div className="collapsible_bar_content">{this.props.answer}</div>) : null} 
+                    {this.state.collapse ? (<div className="collapsible_bar_content">{this.state.answer}</div>) : null} 
                 </div>
             </div>
         )

@@ -10,32 +10,33 @@ class QuestionsPage extends React.Component{
         super()
 
         this.state = {
-            questions: ['Question 1', 'Question 2', 'Question 3'],
-            answers:[]
+            questions: ['Question 1', 'Question 2', 'Question 3']
+            //answers:[]
         }
     }
 
-    componentDidMount(){
-        this.getAnswerMovie('/mflix_questions/1')
-        this.getAnswerMovie('/mflix_questions/2')
-        this.getAnswerMovie('/mflix_questions/3')
-    }
+    //Might need to return to this method latter
+    // componentDidMount(){
+    //     this.getAnswerMovie('/mflix_questions/1')
+    //     this.getAnswerMovie('/mflix_questions/2')
+    //     this.getAnswerMovie('/mflix_questions/3')
+    // }
 
-    getAnswerMovie = async (url) => {
-        const response = await mflix.get(url).then((data)=>{
+    // getAnswerMovie = async (url) => {
+    //     const response = await mflix.get(url).then((data)=>{
             
-        }).catch(error =>{
-            this.setState({answers: [...this.state.answers,'Fix the Backend!']})
-            console.log(this.state.answers)
-        })
-    }
+    //     }).catch(error =>{
+    //         this.setState({answers: [...this.state.answers,'Fix the Backend!']})
+    //         console.log(this.state.answers)
+    //     })
+    // }
     
     render(){
         return(
             <div className="container">
                 <h1 className="title">Lost and Found game</h1>
                 <div></div>
-                <QuestionList questions={this.state.questions} answers={this.state.answers}/>
+                <QuestionList questions={this.state.questions}/>
             </div>
         )
     }
