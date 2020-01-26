@@ -2,6 +2,8 @@ import React from 'react';
 import QuestionList from './Questions/QuestionsList';
 import { Link } from 'react-router';
 import './Questions/Questions-style.css'
+import axios from 'axios'
+import { test } from '../apis/mflix_database'
 
 class QuestionsPage extends React.Component{
     constructor(){
@@ -12,6 +14,15 @@ class QuestionsPage extends React.Component{
         }
     }
     
+    componentDidMount(){
+        this.getQuestion()
+    }
+
+    getQuestion = async () => {
+        const response = await test.get('/mflix_questions/1')
+        console.log(response)
+    }
+
     render(){
         return(
             <div className="container">
