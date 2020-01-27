@@ -8,7 +8,7 @@ class QuestionList extends React.Component{
         super(props)
 
         this.state = {
-            answers:[]
+            answers:['?', '?', '?']
         }
 
         console.log(this.state.answers)
@@ -22,8 +22,11 @@ class QuestionList extends React.Component{
     
 
     //answer should be a single letter
-    handleAnswer (answer){
-        this.setState({answers:[...this.state.answers, answer]})
+    handleAnswer (answer, num){
+        let items=[...this.state.answers]
+        items[num-1]=answer
+        // console.log(items)
+        this.setState({answers:items})
         console.log(this.state.answers)
     }
 

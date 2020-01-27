@@ -20,7 +20,7 @@ class QuestionCard extends React.Component{
     getAnswerMovie = async (url) => {
         
         const response = await mflix.get(url).then((data)=>{
-            this.props.onHandleAnswer(data.data.answer)
+            this.props.onHandleAnswer(data.data.answer, this.props.number)
             this.setState({answer:data.data.answer})   
         }).catch(error =>{
             this.setState({answer: 'Fix the Backend!'})
