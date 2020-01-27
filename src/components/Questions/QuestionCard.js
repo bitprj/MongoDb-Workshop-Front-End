@@ -20,7 +20,7 @@ class QuestionCard extends React.Component{
     getAnswerMovie = async (url) => {
         
         const response = await backend.get(url).then((data)=>{
-            this.props.onHandleAnswer(data.data.answer, this.props.number)
+            this.props.onHandleAnswer(data.data.answer, data.data.order)
             this.setState({answer:data.data.answer})   
         }).catch(error =>{
             this.setState({answer: 'Fix the Backend!'})
