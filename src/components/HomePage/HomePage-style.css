@@ -31,12 +31,16 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(
+    /* background-image: linear-gradient(
         to right,
         rgb(126,213,111,.5),
         rgb(40,180,133, .5)
     ),
-    url(https://cdn.hipwallpaper.com/i/59/10/TbhF6i.jpg);
+    url(https://cdn.hipwallpaper.com/i/59/10/TbhF6i.jpg); */
+    background-image: url('./mongoBanner.jpg');
 
     background-size: cover;
+}
+.list{
+    margin-top: 10px !important;
 }

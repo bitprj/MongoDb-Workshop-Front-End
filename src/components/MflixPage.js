@@ -1,11 +1,13 @@
 import React from 'react';
 import QuestionList from './Questions/QuestionsList';
 import './Questions/Questions-style.css'
+import { mflix } from '../apis/database'
 import { Link } from 'react-router-dom';
 
 
 
-class TrainingPage extends React.Component{
+
+class QuestionsPage extends React.Component{
     constructor(){
         super()
 
@@ -19,14 +21,18 @@ class TrainingPage extends React.Component{
         return(
             <div className="container">
                 <h1 className="title">Lost and Found game</h1>
-                
                 <div className="ui list container">
-                    <QuestionList questions={this.state.questions} url={'/training_questions/'}/>
+                    <QuestionList questions={this.state.questions} url={'/mflix_questions/'}/>
                     <div className="ui grid">
                         <div className=" eight column centered row ">
                             <div className="column center">
-                                <Link to="/airbnb_questions">
+                                <Link to="/">
                                     <button className="ui button">Prev Page</button>
+                                </Link>
+                            </div>
+                            <div className="column">
+                                <Link to="/airbnb_questions">
+                                    <button className="ui button">Next Page</button>
                                 </Link>
                             </div>
                         </div>
@@ -37,4 +43,4 @@ class TrainingPage extends React.Component{
     }
 }
 
-export default TrainingPage
+export default  QuestionsPage;

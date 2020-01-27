@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App';
-import QuestionsPage from './components/QuestionsPage'
+import QuestionsPage from './components/MflixPage'
 import { Route, BrowserRouter as Router} from 'react-router-dom'
 import AirBnbPage from './components/AirBnbPage';
 import TrainingPage from './components/TrainingPage';

@@ -18,8 +18,7 @@ const HeaderMenu = (props) =>{
                 </h1> */}
             </div>
             {/* <cdiv className="mongo_background"></cdiv> */}
-            <img className="mongo_background" src="https://files.slack.com/files-pri/TJ2FB5CE9-FSU6EJ6KA/mongodb-bitproject.png" alt="Picture"/>
-            
+            <div className="mongo_background"></div>
         </div>
     )
 }

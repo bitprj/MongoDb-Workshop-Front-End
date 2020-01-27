@@ -11,12 +11,13 @@ class QuestionList extends React.Component{
             answers:['?', '?', '?']
         }
 
-        console.log(this.state.answers)
+        //console.log(this.props.url)
         //this.answerList = this.answerList.bind(this)
     }
 
     renderList = this.props.questions.map((question, index)=>{
-        return <QuestionCard question={question} url={this.props.url} onHandleAnswer={this.handleAnswer.bind(this)} key={index+1} number={index+1} />
+       
+        return <QuestionCard question={question} apiLink={this.props.url} onHandleAnswer={this.handleAnswer.bind(this)} key={index+1} number={index+1} />
     })
 
     
@@ -27,7 +28,7 @@ class QuestionList extends React.Component{
         items[num-1]=answer
         // console.log(items)
         this.setState({answers:items})
-        console.log(this.state.answers)
+        //console.log(this.state.answers)
     }
 
     render(){
@@ -37,7 +38,7 @@ class QuestionList extends React.Component{
         })
 
         return(
-            <div className="list ui container">
+            <div>
                 <div className="ui grid">
                     <div className=" center aligned five row centered"> 
                         {answerList}
@@ -46,12 +47,12 @@ class QuestionList extends React.Component{
                 <div className="ui grid">
                     {this.renderList}
                 </div>
-        </div>
+            </div>
         )
     }
 }
 
-//Probably wont need this, but keeping it just in case
+//Probably wont need this, but keeping it just in case for now
 // const QuestionList = (props) =>{
 
    
