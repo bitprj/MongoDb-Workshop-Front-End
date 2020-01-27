@@ -1,23 +1,70 @@
 import React from 'react';
 import QuestionCard from './QuestionCard';
 import './Questions-style.css'
+import AnswerBox from './AnswerBox'
 
-const QuestionList = (props) =>{
+class QuestionList extends React.Component{
+    constructor(props){
+        super(props)
 
-   
-    const renderList = props.questions.map((question, index)=>{
-        return <QuestionCard question={question}  key={index+1} number={index+1} />
+        this.state = {
+            answers:[]
+        }
+
+        console.log(this.state.answers)
+        //this.answerList = this.answerList.bind(this)
+    }
+
+    renderList = this.props.questions.map((question, index)=>{
+        return <QuestionCard question={question} onHandleAnswer={this.handleAnswer.bind(this)} key={index+1} number={index+1} />
     })
 
     
 
-    return(
-        <div className="list ui container">
-            <div className="ui grid">
-                {renderList}
-            </div>
+    //answer should be a single letter
+    handleAnswer (answer){
+        this.setState({answers:[...this.state.answers, answer]})
+        console.log(this.state.answers)
+    }
+
+    render(){
+
+        const answerList = this.state.answers.map((answer, index)=>{
+            return <AnswerBox letter={answer} key={index}/>
+        })
+
+        return(
+            <div className="list ui container">
+                <div className="ui grid">
+                    <div className=" center aligned five row centered"> 
+                        {answerList}
+                    </div>
+                </div>
+                <div className="ui grid">
+                    {this.renderList}
+                </div>
         </div>
-    )
+        )
+    }
 }
+
+//Probably wont need this, but keeping it just in case
+// const QuestionList = (props) =>{
+
+   
+//     const renderList = props.questions.map((question, index)=>{
+//         return <QuestionCard question={question}  key={index+1} number={index+1} />
+//     })
+
+    
+
+//     return(
+//         <div className="list ui container">
+//             <div className="ui grid">
+//                 {renderList}
+//             </div>
+//         </div>
+//     )
+// }
 
 export default QuestionList;

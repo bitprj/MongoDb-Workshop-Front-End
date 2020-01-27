@@ -30,6 +30,7 @@
 
 .container{
     display:flex;
+   
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
@@ -61,3 +62,11 @@
     background-size: cover;
 }
 
+.box{
+    border-bottom: 1px solid black;
+}
+
+.letter_container{
+    display: inline-block !important;
+    text-align: center !important;
+}

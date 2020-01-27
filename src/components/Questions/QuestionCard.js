@@ -8,23 +8,24 @@ class QuestionCard extends React.Component{
             collapse: false,
             answer: ''
         }
-
         this.collapseSegment = this.collapseSegment.bind(this)
+        
     }
 
     componentDidMount(){
         this.getAnswerMovie(`/mflix_questions/${this.props.number}`)
+        
     }
 
     getAnswerMovie = async (url) => {
+        
         const response = await mflix.get(url).then((data)=>{
-            
+            this.props.onHandleAnswer(data.data.answer)
+            this.setState({answer:data.data.answer})   
         }).catch(error =>{
             this.setState({answer: 'Fix the Backend!'})
         })
     }
-
-    
 
     collapseSegment(event){
         this.setState({collapse:!this.state.collapse})
