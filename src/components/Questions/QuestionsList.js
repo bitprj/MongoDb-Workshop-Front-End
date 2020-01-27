@@ -16,7 +16,7 @@ class QuestionList extends React.Component{
     }
 
     renderList = this.props.questions.map((question, index)=>{
-        return <QuestionCard question={question} onHandleAnswer={this.handleAnswer.bind(this)} key={index+1} number={index+1} />
+        return <QuestionCard question={question} url={this.props.url} onHandleAnswer={this.handleAnswer.bind(this)} key={index+1} number={index+1} />
     })
 
     

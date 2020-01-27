@@ -1,11 +1,10 @@
 import React from 'react';
 import QuestionList from './Questions/QuestionsList';
 import './Questions/Questions-style.css'
-import { mflix } from '../apis/database'
 
 
 
-class QuestionsPage extends React.Component{
+class TrainingPage extends React.Component{
     constructor(){
         super()
 
@@ -20,10 +19,10 @@ class QuestionsPage extends React.Component{
             <div className="container">
                 <h1 className="title">Lost and Found game</h1>
                 <div></div>
-                <QuestionList questions={this.state.questions} url={'/mflix_questions/'}/>
+                <QuestionList questions={this.state.questions}/>
             </div>
         )
     }
 }
 
-export default  QuestionsPage;
+export default TrainingPage

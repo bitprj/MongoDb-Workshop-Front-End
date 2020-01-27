@@ -17,7 +17,7 @@ const IntroSegment = (props) =>{
                     </div>
                 </div>
                 <div className="row centered"> 
-                    <Link to="/questions">
+                    <Link to="/mflix_questions">
                         <button className="ui button">
                             Start Game
                         </button>

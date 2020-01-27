@@ -1,5 +1,5 @@
 import React from 'react';
-import { mflix } from '../../apis/mflix_database'
+import { backend } from '../../apis/database'
 
 class QuestionCard extends React.Component{
     constructor(props){
@@ -13,13 +13,13 @@ class QuestionCard extends React.Component{
     }
 
     componentDidMount(){
-        this.getAnswerMovie(`/mflix_questions/${this.props.number}`)
+        this.getAnswerMovie(this.props.url + this.props.number)
         
     }
 
     getAnswerMovie = async (url) => {
         
-        const response = await mflix.get(url).then((data)=>{
+        const response = await backend.get(url).then((data)=>{
             this.props.onHandleAnswer(data.data.answer, this.props.number)
             this.setState({answer:data.data.answer})   
         }).catch(error =>{
