@@ -21,8 +21,9 @@ class AirBnbPage extends React.Component{
                 <div className="questionPage_background"></div>
                 <div className="container">
                 
-                    <h1 className="title">Lost and Found game</h1>
-                    
+                    <div className='title-container'>
+                        <h1 className="title">Lost and Found game</h1>
+                    </div>
                     <div className="ui list container">
                         <QuestionList questions={this.state.questions} url={'/airbnb_questions/'} bar_color_open={'training_color_open'} bar_color_closed={'training_color_closed'}/>
                         <div className='button-container'>

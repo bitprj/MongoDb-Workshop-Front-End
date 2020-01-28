@@ -8,21 +8,21 @@
 
 .collapsible_bar_container_closed{
     cursor: pointer;
-    border: solid 1px #34495e;
+    border: solid 1px #05386b;
     border-radius: 10px;
     padding: 15px;
 }
 
 .collapsible_bar_container_open{
     cursor: pointer;
-    border: solid 1px #34495e;
+    border: solid 1px #05386b;
     border-radius: 10px 10px 0px 0px;
     padding: 15px;
 }
 
 .collapsible_bar_content{
     cursor: pointer;
-    border: solid 1px #34495e;
+    border: solid 1px #05386b;
     border-top: none;
     border-radius: 0px 0px 10px 10px;
     padding: 15px;
@@ -48,6 +48,12 @@
     z-index: 1 !important;
 }
 
+.title-container{
+    margin-top: 20px !important;
+    color:#05386b;
+
+}
+
 .mongoDb{
     z-index: -1 !important;
     position: absolute;
@@ -64,19 +70,23 @@
 }
 
 .box{
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #05386b;
 }
 
 .letter_container{
+    
+    color:#05386b;
     display: inline-block !important;
     text-align: center !important;
 }
 
 .training_color_open{
     background-color: #85dcba;
+    color:#05386b;
 }
 .training_color_closed{
     background-color: #41B3A3;
+    color:#05386b;
 }
 
 .questionPage_background{
@@ -96,7 +106,7 @@
 
 .question-border{
     height:auto;
-    border: 1px solid black;
+    border: 1px solid #05386b;
     border-radius: 10px;
     padding-top: 40px;
     padding-bottom: 40px;
@@ -115,8 +125,13 @@
 }
 
 .password-container{
+    background-image: linear-gradient(
+        to right,
+        rgb(126,213,111,.5),
+        rgb(40,180,133, .5)
+    );
     margin-top:20px;
-    border: 1px solid black;
+    border: 1px solid #05386b;
     border-radius: 10px;
 }
 

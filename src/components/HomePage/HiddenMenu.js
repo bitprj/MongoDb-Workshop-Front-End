@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Not Being Used Right Now
 const HiddenMenu = (props) =>{
     return(
         <div className="ui large top fixed menu transition hidden">
