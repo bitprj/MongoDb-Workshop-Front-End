@@ -5,10 +5,11 @@ import QuestionsPage from './components/MflixPage'
 import { Route, BrowserRouter as Router} from 'react-router-dom'
 import AirBnbPage from './components/AirBnbPage';
 import TrainingPage from './components/TrainingPage';
+import './components/HomePage/HomePage-style.css'
 
 const routing = (
     <Router>
-        <div>
+        <div className="home-container">
             <Route exact path="/" component={App} />
             <Route path="/mflix_questions" component={QuestionsPage}/>
             <Route path="/airbnb_questions" component={AirBnbPage}/>

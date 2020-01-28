@@ -34,14 +34,14 @@ class QuestionCard extends React.Component{
     }
     
     render(){
-        let containerState = !this.state.collapse ? "collapsible_bar_container_closed" :  "collapsible_bar_container_open"
+        let containerState = !this.state.collapse ? `collapsible_bar_container_closed ${this.props.bar_color_closed}` :  `collapsible_bar_container_open ${this.props.bar_color_closed}`
         return (
-            <div className="row centered">
+            <div className="card-container row centered">
                 <div className="twelve wide column" >
                     <div className={containerState} onClick={this.collapseSegment}>
-                        <div className="collapsible_bar_title">Question {this.props.number}</div>
+                        <div className={`collapsible_bar_title `}>Question {this.props.number}</div>
                     </div>
-                    {this.state.collapse ? (<div className="collapsible_bar_content">{this.state.answer}</div>) : null} 
+                    {this.state.collapse ? (<div className={`collapsible_bar_content ${this.props.bar_color_open}`}>{this.state.answer}</div>) : null} 
                 </div>
             </div>
         )

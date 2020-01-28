@@ -2,6 +2,7 @@ import React from 'react'
 // import HiddenMenu from './util/HiddenMenu'
 import HeaderMenu from './HomePage/HeaderMenu'
 import IntroSegment from './HomePage/IntroSegment';
+import './HomePage/HomePage-style.css'
 
 class App extends React.Component{
     constructor () {
@@ -13,9 +14,12 @@ class App extends React.Component{
 
     render(){
         return(
-            <div className="pushable">
-                <div className="pusher">
-                    <HeaderMenu title="MongoDB Workshop"/>
+            <div className="app_container">
+                <div className="masthead">
+                    <div className="mongo_background"></div>
+                </div>
+                {/* <HeaderMenu title="MongoDB Workshop"/> */}
+                <div className="container">
                     <IntroSegment/>
                 </div>
             </div>

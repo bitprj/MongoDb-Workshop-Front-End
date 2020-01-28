@@ -1,19 +1,29 @@
+html {
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+ }
+ 
+ body {
+    margin: 0px;
+    min-height: 100%;
+    width: 100%;
+ }
 .masthead{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+    /* display:flex; */
     height: 600px;
     width: 100%;
-    position: relative;
-    text-align: center;
-    z-index: 1;
+    position: absolute;
+    left:0;
+    right:0;
+    /* top:0 !important; */
 }
 
 .topMenu{
     align-self: flex-start;
 }
 
+/* Not Being Used right Now */
 .title{
     /* margin-bottom: 200px; */
     font-size: 50px !important;
@@ -22,12 +32,14 @@
 }
 
 .introSegment{
-    margin-top: 50px !important;
-    margin-bottom: 50px !important;
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
+    top:600px !important;
+    background-color: antiquewhite !important;
 }
 
 .mongo_background{
-    z-index: -1 !important;
+    display:inline-block;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -43,4 +55,19 @@
 }
 .list{
     margin-top: 10px !important;
+}
+
+.home-container{
+    /* display:flex; */
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    min-height: 100%;
+    left:0;
+    right:0;
+}
+
+.app_container{
+  
+    
 }

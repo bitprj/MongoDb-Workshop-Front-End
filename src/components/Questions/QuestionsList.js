@@ -8,7 +8,7 @@ class QuestionList extends React.Component{
         super(props)
 
         this.state = {
-            answers:['?', '?', '?']
+            answers:['?', '?', '?', '?', '?']
         }
 
         //console.log(this.props.url)
@@ -17,7 +17,15 @@ class QuestionList extends React.Component{
 
     renderList = this.props.questions.map((question, index)=>{
        
-        return <QuestionCard question={question} apiLink={this.props.url} onHandleAnswer={this.handleAnswer.bind(this)} key={index+1} number={index+1} />
+        return <QuestionCard
+                 question={question} 
+                 apiLink={this.props.url} 
+                 bar_color_open={this.props.bar_color_open} 
+                 bar_color_closed={this.props.bar_color_closed} 
+                 onHandleAnswer={this.handleAnswer.bind(this)} 
+                 key={index+1} 
+                 number={index+1}  
+                 />
     })
 
     
@@ -38,15 +46,23 @@ class QuestionList extends React.Component{
         })
 
         return(
-            <div>
+            <div className=''>
                 <div className="ui grid">
-                    <div className=" center aligned five row centered"> 
-                        {answerList}
+                    
+                </div>
+                
+                    <div className='space'>
+                        <div className="ui grid">
+                            <div className="password-container center aligned five row centered"> 
+                                {answerList}
+                            </div>
+                            <div className='question-border'>
+                                {this.renderList}
+                            </div>
+                        </div>  
                     </div>
-                </div>
-                <div className="ui grid">
-                    {this.renderList}
-                </div>
+            
+                
             </div>
         )
     }
