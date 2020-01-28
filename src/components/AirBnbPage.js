@@ -10,8 +10,8 @@ class AirBnbPage extends React.Component{
         super()
 
         this.state = {
-            questions: ['Question 1', 'Question 2', 'Question 3', 'Question 4', 'Question 5']
-            //answers:[]
+            questions: ['Question 1', 'Question 2', 'Question 3', 'Question 4', 'Question 5'],
+            answers:['?', '?', '?', '?', '?', '?']
         }
     }
     
@@ -25,7 +25,7 @@ class AirBnbPage extends React.Component{
                         <h1 className="title">Lost and Found game</h1>
                     </div>
                     <div className="ui list container">
-                        <QuestionList questions={this.state.questions} url={'/airbnb_questions/'} bar_color_open={'training_color_open'} bar_color_closed={'training_color_closed'}/>
+                        <QuestionList questions={this.state.questions} answers={this.state.answers} url={'/airbnb_questions/'} bar_color_open={'training_color_open'} bar_color_closed={'training_color_closed'}/>
                         <div className='button-container'>
                             <div className="ui grid">
                                 <div className=" eight column centered row ">

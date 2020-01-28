@@ -8,8 +8,9 @@ class QuestionList extends React.Component{
         super(props)
 
         this.state = {
-            answers:['?', '?', '?', '?', '?']
+            answers:this.props.answers
         }
+        
 
         //console.log(this.props.url)
         //this.answerList = this.answerList.bind(this)
