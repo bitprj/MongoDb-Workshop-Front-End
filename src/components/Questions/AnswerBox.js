@@ -1,10 +1,10 @@
 import React from 'react'
-import './Questions-style.css'
+import '../css/QuestionPage-style.css'
 
 const AnswerBox = (props) =>{
     return(
-        <div className="letter_container column">
-            <div className="box">{props.letter}</div>
+        <div className="letter_container">
+            <h3 className="box">{props.letter}</h3>
         </div>
         
     )

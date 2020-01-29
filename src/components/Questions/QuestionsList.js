@@ -1,6 +1,7 @@
 import React from 'react';
 import QuestionCard from './QuestionCard';
-import './Questions-style.css'
+import '../css/QuestionPage-style.css'
+import '../css/Grid-style.css'
 import AnswerBox from './AnswerBox'
 
 class QuestionList extends React.Component{
@@ -47,23 +48,15 @@ class QuestionList extends React.Component{
         })
 
         return(
-            <div className=''>
-                <div className="ui grid">
-                    
-                </div>
-                
-                    <div className='space'>
-                        <div className="ui grid">
-                            <div className="password-container center aligned five row centered"> 
-                                {answerList}
-                            </div>
-                            <div className='question-border'>
-                                {this.renderList}
-                            </div>
-                        </div>  
+            <div className='list-container'>    
+                <div className="grid-container_questions">
+                    <div className="grid-container_password"> 
+                        {answerList}
                     </div>
-            
-                
+                    <div className='questionlist-container'>
+                        {this.renderList}
+                    </div>
+                </div>  
             </div>
         )
     }

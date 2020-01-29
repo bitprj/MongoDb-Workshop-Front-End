@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App';
-import QuestionsPage from './components/MflixPage'
+import App from './components/Pages/App';
+import QuestionsPage from './components/Pages/MflixPage'
 import { Route, BrowserRouter as Router} from 'react-router-dom'
-import AirBnbPage from './components/AirBnbPage';
-import TrainingPage from './components/TrainingPage';
-import './components/HomePage/HomePage-style.css'
+import AirBnbPage from './components/Pages/AirBnbPage';
+import TrainingPage from './components/Pages/TrainingPage';
+
 
 const routing = (
     <Router>
