@@ -1,4 +1,4 @@
-###Overview of MongoDB WorkShop
+###Overview of MongoDB WorkShop###
 
 **Tech Stack of an App **
   -Explains what a Tech stack is and the various different tech stacks out there
@@ -11,9 +11,6 @@
   -Explains what SQL is
   -Explains what NoSQL is
   -Explains the difference between the two types
-  
-**JSON Serialization**
-  -
   
 **MongoDB Atlas**
   -Shows what MongoDB Atlas is, and its various features
