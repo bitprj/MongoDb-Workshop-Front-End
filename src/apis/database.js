@@ -6,4 +6,4 @@ const backend = axios.create({
 })
 
 
-export { backend}
+export {backend}
