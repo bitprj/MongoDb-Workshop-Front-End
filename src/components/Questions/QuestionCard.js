@@ -71,6 +71,7 @@ class QuestionCard extends React.Component{
                         <div className='collapsible_bar_title'>Question {this.props.number}</div>
                     </div>
                     {this.state.collapse ? (<div className={`collapsible_bar_content ${this.state.correct ? 'collapsible_bar_content_true' : 'collapsible_bar_content_false'}`}>
+                        {this.props.question}
                         <input className={'input'} type="text" id="useranswer" placeholder="Enter Answer" value={this.state.useranswer} onChange={ (e) => this.handleAnswerOnChange(e) } onKeyDown={this.checkWin}/>
                         </div>) : null} 
                 </div>

@@ -10,7 +10,11 @@ class AirBnbPage extends React.Component{
         super()
 
         this.state = {
-            questions: ['Question 1', 'Question 2', 'Question 3', 'Question 4', 'Question 5'],
+            questions: ['Find A Listing with the name \' Cozy House in Ortaköy\' ',
+             'Search for listing with the maximum amount of nights you can stay being 10000 and select the most expensive listing', 
+             'Search for listing that has a price of $2000. Select the listing with the most bedrooms', 
+             'Search for a listing that contains a flexible cancellation policy, and select the fifth listing', 
+             'Search for listing that have their bed type being a Real Bed. Select the first listing that comes up'],
             answers:['?', '?', '?', '?', '?', '?']
         }
     }
