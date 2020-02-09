@@ -2,7 +2,7 @@ import React from 'react'
 import axios from 'axios'
 
 const backend = axios.create({
-    baseURL: 'https://jose-mongodb-workshop-backend.herokuapp.com'
+    baseURL: 'http://localhost:3000'
 })
 
 

@@ -7,7 +7,8 @@ class QuestionCard extends React.Component{
         super(props);
         this.state = {
             collapse: false,
-            answer: '',
+            CorrectAnswer: '',
+            passwordLetter: '',
             useranswer: '',
             correct:false
         }
@@ -22,9 +23,11 @@ class QuestionCard extends React.Component{
     }
 
     getAnswerMovie = async (url) => {
-        const response = await backend.get(url).then((data)=>{
-            /* this.props.onHandleAnswer('?', data.data.order) */
-            this.setState({answer:data.data.answer})   
+        
+        const response = await backend.get(url).then((data)=>{ 
+            this.setState({CorrectAnswer:data.data.correctAnswer,passwordLetter: data.data.answer })  
+         
+            // this.props.onHandleAnswer(data.data.answer, data.data.order)
         }).catch(error =>{
             this.setState({answer: 'Fix the Backend!'})
         })
@@ -43,27 +46,31 @@ class QuestionCard extends React.Component{
 
     checkWin=(e)=>{
         if(e.key==="Enter"){
-        if(this.state.answer===this.state.useranswer){
+        if(this.state.CorrectAnswer===this.state.useranswer){
             this.setState({correct:true}) 
-            this.props.onHandleAnswer(this.state.useranswer, this.props.number)
-            console.log("Found!!!"+this.props.number)
-            alert("Correct!!")
-            }
-            else
-            alert("Wrong!!")
-            console.log(this.state.answer);
+            this.props.onHandleAnswer(this.state.passwordLetter, this.props.number)
+            // console.log("Found!!!"+this.props.number)
+            // alert("Correct!!")
+        } else{
+            // alert("Wrong!!")
+            // console.log(this.state.answer);
+            } 
+            
         }
     }
 
     render(){
-        let containerState = !this.state.collapse ? `collapsible_bar_container_closed ${this.props.bar_color_closed}` :  `collapsible_bar_container_open ${this.props.bar_color_closed}`
+        let containerState = !this.state.collapse ? `collapsible_bar_container_closed ${this.props.bar_color_closed}
+                                                     ${this.state.correct ? 'collapsible_bar_container_closed_true':'collapsible_bar_container_closed_false '}` 
+                                                     :  `collapsible_bar_container_open ${this.props.bar_color_closed} 
+                                                     ${this.state.correct ? 'collapsible_bar_container_open_true':'collapsible_bar_container_open_false'}`
         return (
-            <div className={this.state.correct===true?"question-bar_container_true":"question-bar_container"}>
+            <div className="question-bar_container">
                 <div className="space">
                     <div className={containerState} onClick={this.collapseSegment}>
-                        <div className={`collapsible_bar_title `}>Question {this.props.number}</div>
+                        <div className='collapsible_bar_title'>Question {this.props.number}</div>
                     </div>
-                    {this.state.collapse ? (<div className={`collapsible_bar_content ${this.props.bar_color_open}`}>
+                    {this.state.collapse ? (<div className={`collapsible_bar_content ${this.state.correct ? 'collapsible_bar_content_true' : 'collapsible_bar_content_false'}`}>
                         <input className={'input'} type="text" id="useranswer" placeholder="Enter Answer" value={this.state.useranswer} onChange={ (e) => this.handleAnswerOnChange(e) } onKeyDown={this.checkWin}/>
                         </div>) : null} 
                 </div>
