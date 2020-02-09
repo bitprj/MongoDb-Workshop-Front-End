@@ -1,20 +1,17 @@
 import React from 'react';
 import QuestionList from '../Questions/QuestionsList';
-import '../css/Grid-style.css'
-import '../css/QuestionPage-style.css'
-import { mflix } from '../../apis/database'
+
 import { Link } from 'react-router-dom';
 
 
 
-
-class QuestionsPage extends React.Component{
+class SuppliesPage extends React.Component{
     constructor(){
         super()
 
         this.state = {
             questions: ['Question 1', 'Question 2', 'Question 3', 'Question 4', 'Question 5'],
-            answers:['?', '?', '?', '?', '?', '?']
+            answers:['?', '?', '?', '?', '?', '?','?']
         }
     }
     
@@ -42,21 +39,21 @@ class QuestionsPage extends React.Component{
                         </div>
                     </div>
                     <div className='grid_button-container'>
-                        <Link to='/supplies_questions' className='center'>
+                        <Link to='/airbnb_questions' className='center'>
                             <button className='side-button'>Prev</button>
                         </Link>
-                        <Link to='/training_questions' className='center'>
+                        <Link to='/mflix_questions' className='center'>
                             <button className='side-button'>Next</button>
                         </Link>
                     </div>
                 </div>
                 <div className="grid-item_main">
                     <div className="title-container">
-                        <h1>Third Round</h1>
+                        <h1>Second Round</h1>
                     </div>
                     <div className='Content-container'>
                         <div className="grid-questions">
-                            <QuestionList questions={this.state.questions} answers={this.state.answers} url={'/mflix_questions/'} bar_color_open={'training_color_open'} bar_color_closed={'training_color_closed'}/>     
+                            <QuestionList questions={this.state.questions} answers={this.state.answers} url={'/supplies_questions/'} bar_color_open={'training_color_open'} bar_color_closed={'training_color_closed'}/>     
                         </div>
                     </div>
                 </div>
@@ -65,4 +62,4 @@ class QuestionsPage extends React.Component{
     }
 }
 
-export default  QuestionsPage;
+export default SuppliesPage

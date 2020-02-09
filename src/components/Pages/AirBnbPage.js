@@ -39,7 +39,7 @@ class AirBnbPage extends React.Component{
                         </div>
                     </div>
                     <div className='grid_button-container'>
-                        <Link to='/mflix_questions' className='center'>
+                        <Link to='/' className='center'>
                             <button className='side-button'>Prev</button>
                         </Link>
                         <Link to='/training_questions' className='center'>
@@ -51,7 +51,7 @@ class AirBnbPage extends React.Component{
                 </div>
                 <div className="grid-item_main">
                     <div className="title-container">
-                        <h1>Second Round</h1>
+                        <h1>First Round</h1>
                     </div>
                     <div className='Content-container'>
                         <div className="grid-questions">

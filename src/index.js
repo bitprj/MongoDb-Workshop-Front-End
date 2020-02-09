@@ -5,6 +5,7 @@ import QuestionsPage from './components/Pages/MflixPage'
 import { Route, BrowserRouter as Router} from 'react-router-dom'
 import AirBnbPage from './components/Pages/AirBnbPage';
 import TrainingPage from './components/Pages/TrainingPage';
+import SuppliesPage from './components/Pages/SuppliesPage';
 
 
 const routing = (
@@ -14,6 +15,7 @@ const routing = (
             <Route path="/mflix_questions" component={QuestionsPage}/>
             <Route path="/airbnb_questions" component={AirBnbPage}/>
             <Route path="/training_questions" component={TrainingPage}/>
+            <Route path="/supplies_questions" component={SuppliesPage}/>
         </div>
     </Router>
     

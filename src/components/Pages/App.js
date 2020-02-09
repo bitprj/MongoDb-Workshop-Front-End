@@ -19,7 +19,7 @@ class App extends React.Component{
                 <div className="grid-item_frame-5">5</div>
                 <div className="grid-item_center">
                     <div className='button-container_home'>
-                        <Link to='/mflix_questions'>
+                        <Link to='/airbnb_questions'>
                             <button className='button_home'>Start</button>
                         </Link>
                         

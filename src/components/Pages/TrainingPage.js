@@ -39,14 +39,14 @@ class TrainingPage extends React.Component{
                         </div>
                     </div>
                     <div className='grid_button-container'>
-                        <Link to='/airbnb_questions' className='center'>
+                        <Link to='/mflix_questions' className='center'>
                             <button className='side-button'>Prev</button>
                         </Link>
                     </div>
                 </div>
                 <div className="grid-item_main">
                     <div className="title-container">
-                        <h1>Third Round</h1>
+                        <h1>Fourth Round</h1>
                     </div>
                     <div className='Content-container'>
                         <div className="grid-questions">
