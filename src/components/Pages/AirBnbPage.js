@@ -46,7 +46,7 @@ class AirBnbPage extends React.Component{
                         <Link to='/' className='center'>
                             <button className='side-button'>Prev</button>
                         </Link>
-                        <Link to='/training_questions' className='center'>
+                        <Link to='/supplies_questions' className='center'>
                             <button className='side-button'>Next</button>
                         </Link>
                         
