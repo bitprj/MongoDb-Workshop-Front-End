@@ -55,7 +55,7 @@ class AirBnbPage extends React.Component{
                     </div>
                     <div className='Content-container'>
                         <div className="grid-questions">
-                            <QuestionList questions={this.state.questions} answers={this.state.answers} url={'/mflix_questions/'} bar_color_open={'training_color_open'} bar_color_closed={'training_color_closed'}/>     
+                            <QuestionList questions={this.state.questions} answers={this.state.answers} url={'/airbnb_questions/'} bar_color_open={'training_color_open'} bar_color_closed={'training_color_closed'}/>     
                         </div>
                     </div>
                 </div>

@@ -12,9 +12,6 @@ class QuestionList extends React.Component{
             answers:this.props.answers
         }
         
-
-        //console.log(this.props.url)
-        //this.answerList = this.answerList.bind(this)
     }
 
     renderList = this.props.questions.map((question, index)=>{
@@ -36,9 +33,8 @@ class QuestionList extends React.Component{
     handleAnswer (answer, num){
         let items=[...this.state.answers]
         items[num-1]=answer
-        // console.log(items)
         this.setState({answers:items})
-        //console.log(this.state.answers)
+        
     }
 
     render(){
@@ -62,23 +58,5 @@ class QuestionList extends React.Component{
     }
 }
 
-//Probably wont need this, but keeping it just in case for now
-// const QuestionList = (props) =>{
-
-   
-//     const renderList = props.questions.map((question, index)=>{
-//         return <QuestionCard question={question}  key={index+1} number={index+1} />
-//     })
-
-    
-
-//     return(
-//         <div className="list ui container">
-//             <div className="ui grid">
-//                 {renderList}
-//             </div>
-//         </div>
-//     )
-// }
 
 export default QuestionList;

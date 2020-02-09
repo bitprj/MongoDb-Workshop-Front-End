@@ -15,12 +15,11 @@ class QuestionCard extends React.Component{
 
     componentDidMount(){
         this.getAnswerMovie(this.props.apiLink + this.props.number)
-        //console.log(this.props.apiLink)
+        
         
     }
 
     getAnswerMovie = async (url) => {
-        //console.log(url)
         const response = await backend.get(url).then((data)=>{
             this.props.onHandleAnswer(data.data.answer, data.data.order)
             this.setState({answer:data.data.answer})   
