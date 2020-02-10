@@ -46,7 +46,7 @@ class QuestionList extends React.Component{
         return(
             <div className='list-container'>    
                 <div className="grid-container_questions">
-                    <div className="grid-container_password"> 
+                    <div className={this.props.grid_container}> 
                         {answerList}
                     </div>
                     <div className='questionlist-container'>

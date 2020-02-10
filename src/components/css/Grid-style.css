@@ -53,13 +53,37 @@
     
 }
 
-.grid-container_password{
+.grid-container_password-sales{
     width: 40%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     margin: 0 auto;
  
 }
+.grid-container_password-mflix{
+    width: 40%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    margin: 0 auto;
+ 
+}
+
+.grid-container_password-airbnb{
+    width: 40%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin: 0 auto;
+ 
+}
+
+.grid-container_password-training{
+    width: 40%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    margin: 0 auto;
+ 
+}
+
 
 .grid_button-container{
     display:grid;

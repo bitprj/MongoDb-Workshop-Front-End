@@ -9,13 +9,19 @@ class AirBnbPage extends React.Component{
     constructor(){
         super()
 
+        //Avoid questions that ask students to find documents in a certain position. Positions are not fixed on MongoDB Atlas as it seems. 
+        //Easy Mode, no query operators
         this.state = {
             questions: ['Find A Listing with the name \' Cozy House in Ortaköy\' ',
-             'Search for listing with the maximum amount of nights you can stay being 10000 and select the most expensive listing', 
-             'Search for listing that has a price of $2000. Select the listing with the most bedrooms', 
-             'Search for a listing that contains a flexible cancellation policy, and select the fifth listing', 
-             'Search for listing that have their bed type being a Real Bed. Select the first listing that comes up'],
-            answers:['?', '?', '?', '?', '?', '?']
+             'Search for listing with the maximum amount of nights you can stay being 10,000. The document you are looking for is the most expensive listing amongst the results that came out', 
+             'Search for listing that has a price of $2,000. The Document you are looking for is the listing with the most bedrooms amongst the listings you have found', 
+             'Find the listing with the host id of 9036477', 
+             'Search for listings that have a security deposit of $10,000. The document you are looking for has the most bathrooms amongst the documents returned.',
+             'Search for listings that can accomodate 15 people. The document you are looking for is the listing with the most bedrooms',
+             'Search for listings that have guests including 16 poeple. The document you are looking for is the listing with the least amount of accomodations'
+            ],
+             //Password should be MONGODB
+            answers:['?', '?', '?', '?', '?','?', '?']
         }
     }
     
@@ -59,7 +65,7 @@ class AirBnbPage extends React.Component{
                     </div>
                     <div className='Content-container'>
                         <div className="grid-questions">
-                            <QuestionList questions={this.state.questions} answers={this.state.answers} url={'/airbnb_questions/'} bar_color_open={'training_color_open'} bar_color_closed={'training_color_closed'}/>     
+                            <QuestionList questions={this.state.questions} answers={this.state.answers} url={'/airbnb_questions/'} grid_container={'grid-container_password-airbnb'} bar_color_open={'training_color_open'} bar_color_closed={'training_color_closed'}/>     
                         </div>
                     </div>
                 </div>

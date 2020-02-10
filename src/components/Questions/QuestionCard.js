@@ -46,6 +46,8 @@ class QuestionCard extends React.Component{
 
     checkWin=(e)=>{
         if(e.key==="Enter"){
+            console.log("Correct Answer: ",this.state.correctAnswer)
+            console.log("User Answer: ",this.state.userAnswer)
         if(this.state.CorrectAnswer===this.state.useranswer){
             this.setState({correct:true}) 
             this.props.onHandleAnswer(this.state.passwordLetter, this.props.number)
@@ -71,7 +73,7 @@ class QuestionCard extends React.Component{
                         <div className='collapsible_bar_title'>Question {this.props.number}</div>
                     </div>
                     {this.state.collapse ? (<div className={`collapsible_bar_content ${this.state.correct ? 'collapsible_bar_content_true' : 'collapsible_bar_content_false'}`}>
-                        {this.props.question}
+                        <span className="question_content">{this.props.question}</span>
                         <input className={'input'} type="text" id="useranswer" placeholder="Enter Answer" value={this.state.useranswer} onChange={ (e) => this.handleAnswerOnChange(e) } onKeyDown={this.checkWin}/>
                         </div>) : null} 
                 </div>
