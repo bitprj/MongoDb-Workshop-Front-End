@@ -39,7 +39,7 @@ class TrainingPage extends React.Component{
                                 
                             </ul>
                             <h3>Difficulty: Super Hard</h3>
-                            <p>You will have to use <b>3 to 5 query operators</b> types in eacch question</p>
+                            <p>You will have to use <b>3 to 5 query operators</b> types in each question</p>
                             <h1>Tips:</h1>
                             <ul className='list-style'>
                                 <li className="list-space">Take note of what you need to query. If what you are looking for is in quotes in MongoDB Atlas, make sure that when you query, it is also in quotes.</li>
