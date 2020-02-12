@@ -29,7 +29,7 @@ class TrainingPage extends React.Component{
                         <div>
                             <h3>How to play:</h3>
                             <ul className= 'list-style'>
-                                <li className='list-space'>Use the <b>sample_training database</b> to query for documents that answer the questions for this round. Note that you need to use the <b>company Collection</b> under the sample_training database</li>
+                                <li className='list-space'>Use the <b>sample_training database</b> to query for documents that answer the questions for this round. Note that you need to use the <b>company Collection</b> under the sample_training database.</li>
                                 
                                 <li className='list-space'>If you think you have found the answer to the question, <b>copy and paste the id </b>of the document onto the answer bar and <b>press Enter.</b></li>
                                 
@@ -43,7 +43,10 @@ class TrainingPage extends React.Component{
                             <h1>Tips:</h1>
                             <ul className='list-style'>
                                 <li className="list-space">Take note of what you need to query. If what you are looking for is in quotes in MongoDB Atlas, make sure that when you query, it is also in quotes.</li>
-                                <li>Read the questions carefully. They should be all you need to know what you are looking for.</li>
+                                <li className="list-space">When querying objects, you do <b>NOT</b> need to add quotes to the property</li>
+                                <li className="list-space">Read the questions carefully. They should be all you need to know what you are looking for.</li>
+                                <li className="list-space">You do not need to use query operators for everyting inside a question. Some parts of the questions are just there to help point you to the right direction.</li>
+                                <li className="list-space">Most importantly, please <b>look over a document</b> first before querying to see what you can and cannot query</li>
                             </ul>
                         </div>
                     </div>
