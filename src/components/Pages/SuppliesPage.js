@@ -40,7 +40,7 @@ class SuppliesPage extends React.Component{
                         <div>
                             <h3>How to play:</h3>
                             <ul className= 'list-style'>
-                                <li className='list-space'>Use the <b>sample_supplies database</b> to query for documents that answer the questions for this round. Note that you only need to use the <b>sale Collection</b> for this round.</li>
+                                <li className='list-space'>Use the <b>sample_supplies database</b> to query for documents that answer the questions for this round. Note that you need to use the <b>sale Collection</b> under the sample_supplies database</li>
                                 
                                 <li className='list-space'>If you think you have found the answer to the question, <b>copy and paste the id </b>of the document onto the answer bar and <b>press Enter.</b></li>
                                 
