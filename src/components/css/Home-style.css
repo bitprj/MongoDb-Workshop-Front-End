@@ -4,106 +4,41 @@
 }
 
 .button-container_home{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
     position: relative;
+    height: 100%;
     
 
 
 }
 
 .button_home{
-    padding: 10px 25px;
+    padding: 12px 50px;
+    border-style: none;
     border-radius: 12px;
     position: absolute;
-    bottom: 12%;
+    bottom: 15%;
     left: 45%;
+    color:#ecf0f1;
+    background-color: #2ecc71;
 }
 
-.button:hover{
+.button_home:hover{
     cursor: pointer;
 }
 
 
 .grid-item_center{
-    border:3px solid white;
     background-image: url('./mongoBanner.jpg');
     background-size: cover;
     background-position: 50% 50%;
     background-repeat: no-repeat;
-    grid-area: 2 / 2 / span 2 / span 2;
-
-}
-
-.grid-item_frame-1{
-    background-image: url('https://miro.medium.com/max/1040/1*0lgunvVYa8gZ_sfMHflyvw.jpeg');
-    background-size: contain ;
-}
-.grid-item_frame-2{
-    background-image: url('https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=width:705/https://www.filepicker.io/api/file/nlMKa4JeSBysXoj7pa90');
-    background-size: cover;
-}
-.grid-item_frame-3{
-    background-image: url('https://static.sinap.ps/blog/2014/Dec/nodejs_logo-1417834491072.png');
-    background-color: #DEF2F1;
-    background-size: contain;
+    /* width: 100%; */
+    height: 100%;
+    text-align: center;
     
 }
-.grid-item_frame-4{
-    background-image: url('https://zdnet1.cbsistatic.com/hub/i/r/2019/02/03/bd198e6f-b5fe-4d41-bb16-87381493652f/resize/1200x900/c855608e0ff1320caf12bd869210e051/03-mongodb.png');
-    background-size: cover;
-}
-.grid-item_frame-5{
-    background-image: url('http://niralar.com/wp-content/uploads/2018/07/mongoose.jpg');
-    background-size: cover;
-    /* background-position: 50% 50%;
-    background-repeat: no-repeat; */
 
-}
-.grid-item_frame-7{
-    background-image: url('http://blog.addthiscdn.com/wp-content/uploads/2014/11/addthis-react-flux-javascript-scaling.png');
-    background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-}
-.grid-item_frame-8{
-    background-image: url('https://opencollective-production.s3-us-west-1.amazonaws.com/7a00cdd0-fae4-11e7-ae09-7f36f712693a.png');
-    background-color: #7f8c8d;
-    background-size: contain;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-}
-.grid-item_frame-9{
-    background-image: url('http://innovativeteams.net/wp-content/uploads/2017/04/react.png');
-    background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-}
-.grid-item_frame-10{
-    background-image: url('https://www.blazeclan.com/wp-content/uploads/2014/01/MongoDB-on-the-Clouds-%E2%80%93-An-Introduction-to-an-Evolution-from-RDBMS.png');
-    background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-}
-.grid-item_frame-11{
-    background-image: url('https://miro.medium.com/max/1532/1*uPL1uCtLBRSk6akPL2hNzg.jpeg');
-    background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-}
-.grid-item_frame-12{
-    background-image: url('https://www.sohamkamani.com/static/65137ed3c844d05124dcfdab28263c21/6b427/express-routing-logo.png');
-    background-size: contain;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-color: #81ecec;
-}
-.grid-item_frame-13{
-    background-image: url('https://zdnet3.cbsistatic.com/hub/i/r/2018/02/16/8abdb3e1-47bc-446e-9871-c4e11a46f680/resize/470xauto/2ea638bf5532abe5081dabb0fbecbc2d/mongo-db-logo.png');
-    background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-}
 
+.button-title{
+    font-size: 20px;
+}
