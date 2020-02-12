@@ -24,7 +24,7 @@
 .grid-item_side{
     
     display: grid;
-    grid-template-rows: 1fr 4fr 1fr;
+    grid-template-rows: 1fr 7fr 1fr;
     padding: 10px;
     background-color: #3AAFA9;
     
