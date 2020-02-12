@@ -1,7 +1,8 @@
 .title-container{
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
+    flex-direction: column;
     width: 100%;
     height: auto;
 }
@@ -135,4 +136,8 @@
 
 .list-space{
     margin-bottom: 5px;
+}
+
+.warning{
+    color: #e85a4f;
 }

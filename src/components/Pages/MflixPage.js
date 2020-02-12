@@ -44,6 +44,8 @@ class QuestionsPage extends React.Component{
                                 
                                 <li className='list-space'>When all answers have been correctly answered, all question bars will turn green and the password shall be relieved.</li>
                                 
+                                <li className='warning-text'><b>Don't refresh the page, or risk losing progress of your work</b></li>
+                                
                             </ul>
                             <h3>Difficulty: Hard</h3>
                             <p>You will have to use <b>2 or 3 query operators</b> types in each question</p>
@@ -68,6 +70,7 @@ class QuestionsPage extends React.Component{
                 </div>
                 <div className="grid-item_main">
                     <div className="title-container">
+                        <h1 className="warning">DO NOT REFRESH PAGE</h1>
                         <h1>Third Round</h1>
                     </div>
                     <div className='Content-container'>
