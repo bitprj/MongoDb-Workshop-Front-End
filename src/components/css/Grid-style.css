@@ -5,7 +5,7 @@
 
 .grid-container{
     display:grid;
-    grid-template-columns: 25% 75%;
+    grid-template-columns: 28% 72%;
     width: 100vw;
     height: 100vh;
     
