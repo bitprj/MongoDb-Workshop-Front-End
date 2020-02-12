@@ -84,7 +84,11 @@
 .side-button{
     border:none;
     background-color: #3AAFA9;
+    width:100%;
 
+}
+.side-button:hover{
+    cursor: pointer;
 }
 .collapsible_bar_title{
     color: #DEF2F1;
@@ -102,7 +106,11 @@
     background-color: #3AAFA9;
 }
 .center{
+    display: flex;
+    justify-content: center;
     text-align: center;
+    
+    
 }
 
 .logo-container{
@@ -118,4 +126,13 @@
     display: inline-block;
     margin-top: 5px;
     margin-bottom: 15px;
+}
+
+.list-style{
+    list-style-type: disc;
+    margin-left: 10px !important;
+}
+
+.list-space{
+    margin-bottom: 5px;
 }

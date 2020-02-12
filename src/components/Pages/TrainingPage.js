@@ -27,15 +27,24 @@ class TrainingPage extends React.Component{
                     <div className="Instructions-container">
                         <h1 className='Instructions-title'>Instructions</h1>
                         <div>
-                            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots 
-                            in a piece of classical Latin literature from 45 BC, making it over 2000 years old. 
-                            Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked 
-                            up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and
-                            going through the cites of the word in classical literature, discovered the undoubtable
-                            source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et
-                            Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a
-                            treatise on the theory of ethics, very popular during the Renaissance. The first line
-                            of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+                            <h3>How to play:</h3>
+                            <ul className= 'list-style'>
+                                <li className='list-space'>Use the <b>sample_training database</b> to query for documents that answer the questions for this round. Note that you only need to use the <b>company Collection</b> for this round.</li>
+                                
+                                <li className='list-space'>If you think you have found the answer to the question, <b>copy and paste the id </b>of the document onto the answer bar and <b>press Enter.</b></li>
+                                
+                                <li className='list-space'>If the answer is correct, the question bar shall turn green and a question mark at the top of the screen shall be replaced by a letter.</li>
+                                
+                                <li className='list-space'>When all answers have been correctly answered, all question bars will turn green and the password shall be relieved.</li>
+                                
+                            </ul>
+                            <h3>Difficulty: Super Hard</h3>
+                            <p>You will have to use <b>3 to 5 query operators</b> types in eacch question</p>
+                            <h1>Tips:</h1>
+                            <ul className='list-style'>
+                                <li className="list-space">Take note of what you need to query. If what you are looking for is in quotes in MongoDB Atlas, make sure that when you query, it is also in quotes.</li>
+                                <li>Read the questions carefully. They should be all you need to know what you are looking for.</li>
+                            </ul>
                         </div>
                     </div>
                     <div className='grid_button-container'>
