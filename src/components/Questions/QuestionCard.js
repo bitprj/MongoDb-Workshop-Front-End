@@ -20,11 +20,8 @@ class QuestionCard extends React.Component{
     componentDidMount(){
         
         const ans = localStorage.getItem(`useranswer${this.props.question}`) ? localStorage.getItem(`useranswer${this.props.question}`) : ''
-        this.setState({ useranswer: ans, correct: localStorage.getItem(`correct${this.props.question}`)})
+        this.setState({ useranswer: ans})
         this.getAnswerMovie(this.props.apiLink + this.props.number)
-        
-
-        
         
     }
 
@@ -61,6 +58,7 @@ class QuestionCard extends React.Component{
             this.props.onHandleAnswer(this.state.passwordLetter, this.props.number)
         }
         else{
+            console.log('F')
             this.setState({correct:false}) 
             localStorage.setItem(`correct${this.props.question}`, false)
         }

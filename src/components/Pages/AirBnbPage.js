@@ -47,7 +47,7 @@ class AirBnbPage extends React.Component{
                                 
                                 <li className='list-space'>When all answers have been correctly answered, all question bars will turn green and the password shall be relieved.</li>
 
-                                <li className='warning-text'><b>Don't refresh the page, or risk losing progress of your work</b></li>
+                                {/* <li className='warning-text'><b>Don't refresh the page, or risk losing progress of your work</b></li> */}
                                 
                             </ul>
                             <h3>Difficulty: Easy</h3>
@@ -75,7 +75,7 @@ class AirBnbPage extends React.Component{
                 </div>
                 <div className="grid-item_main">
                     <div className="title-container">
-                        <h1 className="warning">DO NOT REFRESH PAGE</h1>
+                        {/* <h1 className="warning">DO NOT REFRESH PAGE</h1> */}
                         <h1>First Round</h1>
                     </div>
                     <div className='Content-container'>
