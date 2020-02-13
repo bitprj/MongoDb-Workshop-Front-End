@@ -9,9 +9,15 @@ class QuestionList extends React.Component{
         super(props)
 
         this.state = {
-            answers:this.props.answers
+            answers:[]
         }
-        
+    }
+
+    componentDidMount(){
+        const pastAnswers = JSON.parse(localStorage.getItem(`answers${this.props.url}`)) ? JSON.parse(localStorage.getItem(`answers${this.props.url}`)) :this.props.answers 
+        this.setState({answers:  pastAnswers})
+     
+
     }
 
     renderList = this.props.questions.map((question, index)=>{
@@ -34,6 +40,9 @@ class QuestionList extends React.Component{
         let items=[...this.state.answers]
         items[num-1]=answer
         this.setState({answers:items})
+        localStorage.setItem(`answers${this.props.url}`, JSON.stringify(items))
+        console.log(localStorage.getItem(`answers${this.props.url}`))
+        
         
     }
 
